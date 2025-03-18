@@ -1,6 +1,6 @@
 {
 	"logo": {
-		"imagePath": "/src/assets/global/navigation/logo.svg"
+		"imagePath": "/src/assets/global/navigation/logo.png"
 	},
 	"pages": [
 		{
@@ -13,11 +13,13 @@
 		},
 		{
 			"title": "Works",
-			"link": "/works"
+			"link": "/works",
+			"hidden": true
 		},
 		{
 			"title": "News",
-			"link": "/news"
+			"link": "/news",
+			"hidden": true
 		},
 		{
 			"title": "Contacts",
