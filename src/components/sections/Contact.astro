@@ -73,7 +73,7 @@ const { title, fields } = Astro.props;
 										<p class="text-black font-semibold max-w-full mb-3">
 											{field.title}
 										</p>
-										<textarea
+										<textarea name={field.name}
 											required={field.required}
 											placeholder={field.placeholder}
 											class="text-zinc-800 cursor-text py-4 w-full border-2 border-black border-solid rounded-md m-0",
@@ -86,7 +86,7 @@ const { title, fields } = Astro.props;
 										<p class="text-black font-semibold max-w-full mb-3">
 											{field.title}
 										</p>
-										<select
+										<select name={field.name}
 											required={field.required}
 											class="text-zinc-800 cursor-text py-4 w-full h-14 min-h-[3.50rem] border-2 border-black border-solid rounded-md m-0 [&:invalid]:text-zinc-500"
 										>
@@ -103,7 +103,7 @@ const { title, fields } = Astro.props;
 										<p class="text-black font-semibold max-w-full mb-3">
 											{field.title}
 										</p>
-										<input
+										<input name={field.name}
 											type={field.type as HTMLInputTypeAttribute}
 											required={field.required}
 											placeholder={field.placeholder}

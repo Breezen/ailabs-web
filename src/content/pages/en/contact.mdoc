@@ -14,12 +14,12 @@ seo:
 {% Contact
   title="Get in touch"
   fields=[
-    {title: "Name", placeholder: "", required: true, type: "text"},
-    {title: "Email", placeholder: "contact@email.com", required: true, type: "email"},
-    {title: "I am", required: true, type: "select", options: [{value: "founder", label: "Founder / Entrepreneur"}, {value: "investor", label: "Investor / LP"}]},
-    {title: "Website / LinkedIn (if applicable)", placeholder: "https://", type: "text"},
-    {title: "Message or Questions", placeholder: "Type your message here", required: true, type: "textarea", width: 2},
-    {title: "Contact Us", type: "submit", width: 2}
+    {name: "name", title: "Name", placeholder: "", required: true, type: "text"},
+    {name: "email", title: "Email", placeholder: "contact@email.com", required: true, type: "email"},
+    {name: "role", title: "I am", required: true, type: "select", options: [{value: "founder", label: "Founder / Entrepreneur"}, {value: "investor", label: "Investor / LP"}]},
+    {name: "website", title: "Website / LinkedIn (if applicable)", placeholder: "https://", type: "text"},
+    {name: "message", title: "Message or Questions", placeholder: "Type your message here", required: true, type: "textarea", width: 2},
+    {name: "submit", title: "Contact Us", type: "submit", width: 2}
   ]
 /%}
 
