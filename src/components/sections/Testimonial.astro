@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import googleWhite from "@/assets/pages/homepage/google-white.png";
+import openaiWhite from "@/assets/pages/homepage/openai-white.png";
 
 interface Props {
 	testimonial: string;
@@ -14,8 +14,8 @@ const { testimonial, name } = Astro.props;
 	<div class="bg-black flex-grow py-20 px-16 rounded-3xl">
 		<div class="items-center flex-col justify-center text-center flex">
 			<Image
-				src={googleWhite}
-				alt="Google logo"
+				src={openaiWhite}
+				alt="OpenAI logo"
 				class="object-contain align-middle inline-block w-full h-10 max-w-[8.13rem] mb-8"
 			/>
 			<h2 class="text-white text-[2.13rem] leading-9 lg:max-w-[60%] mb-1">
