@@ -1,5 +1,5 @@
 ---
-title: Contact us
+title: Contact Us
 type: informational
 lastUpdateDate: 2025-03-27
 hideTitle: false
@@ -14,12 +14,12 @@ seo:
 {% Contact
   title="Get in touch"
   fields=[
-    {title: "Full Name", placeholder: "John Doe", required: true, type: "text"},
+    {title: "Name", placeholder: "John Doe", required: true, type: "text"},
     {title: "Email", placeholder: "contact@email.com", required: true, type: "email"},
-    {title: "Phone", placeholder: "+1 345-678", type: "tel"},
-    {title: "Schedule to receive call", placeholder: "10:00 AM to 4:00 PM", type: "text"},
-    {title: "Message", placeholder: "Type your message here", type: "textarea", width: 2},
-    {title: "Contact us", type: "submit", width: 2}
+    {title: "I am", required: true, type: "select", options: [{value: "founder", label: "Founder / Entrepreneur"}, {value: "investor", label: "Investor / LP"}]},
+    {title: "Website / LinkedIn (if applicable)", placeholder: "https://", type: "text"},
+    {title: "Message or Questions", placeholder: "Type your message here", required: true, type: "textarea", width: 2},
+    {title: "Contact Us", type: "submit", width: 2}
   ]
 /%}
 

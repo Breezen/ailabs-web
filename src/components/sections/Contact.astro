@@ -25,7 +25,12 @@ type HTMLInputTypeAttribute =
 	| "url"
 	| "week";
 
-type FormFieldType = HTMLInputTypeAttribute | "textarea" | "submit";
+type FormFieldType = HTMLInputTypeAttribute | "textarea" | "submit" | "select";
+
+interface FormFieldOption {
+	value: string;
+	label: string;
+}
 
 interface FormField {
 	title: string;
@@ -33,6 +38,7 @@ interface FormField {
 	type: FormFieldType;
 	required?: boolean;
 	width?: 1 | 2;
+	options?: FormFieldOption[];
 }
 
 interface Props {
@@ -47,9 +53,9 @@ const { title, fields } = Astro.props;
 	class="items-center gap-x-[6.25rem] pb-40 auto-cols-fr justify-center flex"
 >
 	<div class="col-span-1 row-span-1 w-full max-w-3xl">
-		<h2 class="text-[2.13rem] leading-9 font-semibold mb-1">
+		{/* <h2 class="text-[2.13rem] leading-9 font-semibold mb-1">
 			{title}
-		</h2>
+		</h2> */}
 		<div class="mt-8">
 			<div class="mt-0 mx-0 mb-3.5">
 				<form data-static-form-name="contact" class="items-center auto-cols-fr grid-cols-1 sm:grid-cols-2 grid-rows-[auto] grid gap-8">
@@ -74,6 +80,23 @@ const { title, fields } = Astro.props;
 										/>
 									</div>
 								);
+							} else if (field.type === "select") {
+								return (
+									<div class:list={["text-base", field.width == 2 && "sm:col-span-2"]}>
+										<p class="text-black font-semibold max-w-full mb-3">
+											{field.title}
+										</p>
+										<select
+											required={field.required}
+											class="text-zinc-800 cursor-text py-4 w-full h-14 min-h-[3.50rem] border-2 border-black border-solid rounded-md m-0 [&:invalid]:text-zinc-500"
+										>
+											<option value="" disabled selected>Select an option</option>
+											{field.options?.map((option) => (
+												<option value={option.value}>{option.label}</option>
+											))}
+										</select>
+									</div>
+								);
 							} else {
 								return (
 									<div class:list={["text-base", field.width == 2 && "sm:col-span-2"]}>
@@ -91,7 +114,7 @@ const { title, fields } = Astro.props;
 							}
 						})
 					}
-				</fo>
+				</form>
 			</div>
 		</div>
 	</div>
