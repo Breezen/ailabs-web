@@ -13,13 +13,11 @@
 		},
 		{
 			"title": "Portfolio",
-			"link": "/works",
-			"hidden": true
+			"link": "/works"
 		},
 		{
 			"title": "News",
-			"link": "/news",
-			"hidden": true
+			"link": "/news"
 		},
 		{
 			"title": "Contatti",
