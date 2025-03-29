@@ -90,7 +90,7 @@ const { title, fields } = Astro.props;
 											required={field.required}
 											class="text-zinc-800 cursor-text py-4 w-full h-14 min-h-[3.50rem] border-2 border-black border-solid rounded-md m-0 [&:invalid]:text-zinc-500"
 										>
-											<option value="" disabled selected>Select an option</option>
+											<option value="" disabled selected>Select a role</option>
 											{field.options?.map((option) => (
 												<option value={option.value}>{option.label}</option>
 											))}
